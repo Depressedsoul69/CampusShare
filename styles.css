@@ -84,12 +84,12 @@ h1 span { color: var(--green); }
 .listing-card { background:#fff; border:1px solid var(--line); border-radius:18px; overflow:hidden; transition:transform .18s, box-shadow .18s; }
 .listing-card:hover { transform:translateY(-4px); box-shadow:var(--shadow); }
 .item-art { height:174px; position:relative; display:flex; align-items:flex-end; padding:18px; background-size:cover; background-position:center; overflow:hidden; }
-.item-art.study { background:linear-gradient(135deg,#e9edf0,#d9e0e1); }
-.item-art.electronics { background:linear-gradient(135deg,#e2ece7,#c5ddd0); }
-.item-art.fashion { background:linear-gradient(135deg,#f7eadb,#efd8bf); }
-.item-art.mobility { background:linear-gradient(135deg,#e8ece3,#cfdcc7); }
-.item-art.sports { background:linear-gradient(135deg,#ede7f3,#d8cbe5); }
-.item-art.hostel { background:linear-gradient(135deg,#f1ece1,#e4dcc9); }
+.item-art.study { background-color:#e9edf0; }
+.item-art.electronics { background-color:#e2ece7; }
+.item-art.fashion { background-color:#f7eadb; }
+.item-art.mobility { background-color:#e8ece3; }
+.item-art.sports { background-color:#ede7f3; }
+.item-art.hostel { background-color:#f1ece1; }
 .image-tint { position:absolute; inset:0; background:linear-gradient(180deg, rgba(255,255,255,.04), rgba(18,32,27,.22)); }
 .detail-art { background-size:cover; background-position:center; position:relative; overflow:hidden; }
 .detail-art > span:last-child { position:relative; z-index:1; color:rgba(255,255,255,.85); text-shadow:0 2px 8px rgba(0,0,0,.35); }
