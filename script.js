@@ -1,16 +1,16 @@
 const listings = [
-  { id:1, name:'Casio fx-991CW Scientific Calculator', category:'Study', price:30, deposit:300, location:'Block B · 0.6 km', distance:0.6, rating:4.9, reviews:18, owner:'Aarav M.', art:'FX', featured:true, description:'Clean, fully working scientific calculator. Ideal for semester exams, labs, and short-term assignments.', availability:'Available today' },
-  { id:2, name:'Engineering Mathematics Vol. 1', category:'Study', price:15, deposit:150, location:'Library Road · 1.1 km', distance:1.1, rating:4.8, reviews:12, owner:'Ishita K.', art:'MATH', description:'Good-condition reference textbook with light highlighting. Great for a single semester or exam prep.', availability:'Available tomorrow' },
-  { id:3, name:'Sony WH-1000XM4 Headphones', category:'Electronics', price:80, deposit:900, location:'Hostel C · 0.8 km', distance:0.8, rating:4.9, reviews:25, owner:'Kabir S.', art:'WH', featured:true, description:'Noise-cancelling headphones with case and charging cable. Perfect for a project week, travel, or presentations.', availability:'Available today' },
-  { id:4, name:'Formal Black Blazer — Size M', category:'Fashion', price:100, deposit:700, location:'Admin Block · 0.9 km', distance:0.9, rating:4.7, reviews:9, owner:'Naina P.', art:'BLAZER', description:'Classic black blazer suited for interviews, presentations, viva, and formal college events.', availability:'Available in 2 days' },
-  { id:5, name:'Btwin Riverside Bicycle', category:'Mobility', price:120, deposit:1200, location:'North Gate · 1.7 km', distance:1.7, rating:4.6, reviews:14, owner:'Raghav T.', art:'BIKE', description:'Comfortable geared bicycle for campus commuting. Helmet available on request.', availability:'Available today' },
-  { id:6, name:'Decathlon Football + Pump', category:'Sports', price:40, deposit:250, location:'Sports Complex · 0.4 km', distance:0.4, rating:4.8, reviews:21, owner:'Yash R.', art:'BALL', featured:true, description:'Match-ready football with compact hand pump. Great for weekend games or inter-department practice.', availability:'Available now' },
-  { id:7, name:'Logitech MX Master 3S', category:'Electronics', price:65, deposit:800, location:'Tech Block · 0.7 km', distance:0.7, rating:4.9, reviews:11, owner:'Meera A.', art:'MX', description:'Ergonomic wireless mouse with USB receiver and Bluetooth. Useful for short coding or design projects.', availability:'Available today' },
-  { id:8, name:'Portable Room Heater', category:'Hostel', price:55, deposit:500, location:'Hostel A · 0.5 km', distance:0.5, rating:4.5, reviews:7, owner:'Dev P.', art:'HEAT', description:'Compact room heater for cold nights. Works well in small rooms. Safety instructions included.', availability:'Available tomorrow' },
-  { id:9, name:'Arduino Starter Kit', category:'Electronics', price:75, deposit:650, location:'Innovation Lab · 1.3 km', distance:1.3, rating:4.9, reviews:16, owner:'Sanya G.', art:'UNO', description:'Arduino board with sensors, wires, LEDs, breadboard, and basic components for mini projects.', availability:'Available this week' },
-  { id:10, name:'White Presentation Shirt — Size L', category:'Fashion', price:45, deposit:250, location:'Girls Hostel · 1.0 km', distance:1.0, rating:4.7, reviews:8, owner:'Tanya S.', art:'SHIRT', description:'Crisp white formal shirt, freshly cleaned. Useful for interviews, presentations, and formal events.', availability:'Available today' },
-  { id:11, name:'Yoga Mat + Carry Strap', category:'Sports', price:25, deposit:120, location:'East Gate · 0.9 km', distance:0.9, rating:4.6, reviews:6, owner:'Ananya V.', art:'YOGA', description:'Lightweight non-slip yoga mat with carry strap. Clean and ready to use.', availability:'Available today' },
-  { id:12, name:'Mini Projector 1080p', category:'Electronics', price:180, deposit:1800, location:'Seminar Hall · 1.4 km', distance:1.4, rating:4.8, reviews:10, owner:'Aditya N.', art:'1080P', featured:true, description:'Compact projector with HDMI and USB input. Ideal for club presentations, movie nights, and project demos.', availability:'Available Friday' }
+  { id:1, name:'Casio fx-991CW Scientific Calculator', category:'Study', price:90, originalPrice:1500, deposit:300, location:'Block B · 0.6 km', distance:0.6, rating:4.9, reviews:18, owner:'Aarav M.', art:'FX', image:'assets/calculator.jpg', featured:true, description:'Clean, fully working scientific calculator. Ideal for semester exams, labs, and short-term assignments.', availability:'Available today' },
+  { id:2, name:'Engineering Mathematics Vol. 1', category:'Study', price:36, originalPrice:600, deposit:150, location:'Library Road · 1.1 km', distance:1.1, rating:4.8, reviews:12, owner:'Ishita K.', art:'MATH', image:'assets/math-book.jpg', description:'Good-condition reference textbook with light highlighting. Great for a single semester or exam prep.', availability:'Available tomorrow' },
+  { id:3, name:'Sony WH-1000XM4 Headphones', category:'Electronics', price:600, originalPrice:10000, deposit:900, location:'Hostel C · 0.8 km', distance:0.8, rating:4.9, reviews:25, owner:'Kabir S.', art:'WH', image:'assets/headphones.jpg', featured:true, description:'Noise-cancelling headphones with case and charging cable. Perfect for a project week, travel, or presentations.', availability:'Available today' },
+  { id:4, name:'Formal Black Blazer — Size M', category:'Fashion', price:150, originalPrice:2500, deposit:700, location:'Admin Block · 0.9 km', distance:0.9, rating:4.7, reviews:9, owner:'Naina P.', art:'BLAZER', image:'assets/blazer.jpg', description:'Classic black blazer suited for interviews, presentations, viva, and formal college events.', availability:'Available in 2 days' },
+  { id:5, name:'Btwin Riverside Bicycle', category:'Mobility', price:720, originalPrice:12000, deposit:1200, location:'North Gate · 1.7 km', distance:1.7, rating:4.6, reviews:14, owner:'Raghav T.', art:'BIKE', image:'assets/bicycle.jpg', description:'Comfortable geared bicycle for campus commuting. Helmet available on request.', availability:'Available today' },
+  { id:6, name:'Decathlon Football + Pump', category:'Sports', price:48, originalPrice:800, deposit:250, location:'Sports Complex · 0.4 km', distance:0.4, rating:4.8, reviews:21, owner:'Yash R.', art:'BALL', image:'assets/football.jpg', featured:true, description:'Match-ready football with compact hand pump. Great for weekend games or inter-department practice.', availability:'Available now' },
+  { id:7, name:'Logitech MX Master 3S', category:'Electronics', price:480, originalPrice:8000, deposit:800, location:'Tech Block · 0.7 km', distance:0.7, rating:4.9, reviews:11, owner:'Meera A.', art:'MX', image:'assets/mouse.jpg', description:'Ergonomic wireless mouse with USB receiver and Bluetooth. Useful for short coding or design projects.', availability:'Available today' },
+  { id:8, name:'Portable Room Heater', category:'Hostel', price:120, originalPrice:2000, deposit:500, location:'Hostel A · 0.5 km', distance:0.5, rating:4.5, reviews:7, owner:'Dev P.', art:'HEAT', image:'assets/heater.jpg', description:'Compact room heater for cold nights. Works well in small rooms. Safety instructions included.', availability:'Available tomorrow' },
+  { id:9, name:'Arduino Starter Kit', category:'Electronics', price:90, originalPrice:1500, deposit:650, location:'Innovation Lab · 1.3 km', distance:1.3, rating:4.9, reviews:16, owner:'Sanya G.', art:'UNO', image:'assets/arduino.jpg', description:'Arduino board with sensors, wires, LEDs, breadboard, and basic components for mini projects.', availability:'Available this week' },
+  { id:10, name:'White Presentation Shirt — Size L', category:'Fashion', price:30, originalPrice:500, deposit:250, location:'Girls Hostel · 1.0 km', distance:1.0, rating:4.7, reviews:8, owner:'Tanya S.', art:'SHIRT', image:'assets/shirt.jpg', description:'Crisp white formal shirt, freshly cleaned. Useful for interviews, presentations, and formal events.', availability:'Available today' },
+  { id:11, name:'Yoga Mat + Carry Strap', category:'Sports', price:42, originalPrice:700, deposit:120, location:'East Gate · 0.9 km', distance:0.9, rating:4.6, reviews:6, owner:'Ananya V.', art:'YOGA', image:'assets/yoga.jpg', description:'Lightweight non-slip yoga mat with carry strap. Clean and ready to use.', availability:'Available today' },
+  { id:12, name:'Mini Projector 1080p', category:'Electronics', price:480, originalPrice:8000, deposit:1800, location:'Seminar Hall · 1.4 km', distance:1.4, rating:4.8, reviews:10, owner:'Aditya N.', art:'1080P', image:'assets/projector.jpg', featured:true, description:'Compact projector with HDMI and USB input. Ideal for club presentations, movie nights, and project demos.', availability:'Available Friday' }
 ];
 
 let activeCategory = 'All';
@@ -51,7 +51,8 @@ function renderListings() {
   const result = filteredListings();
   listingGrid.innerHTML = result.map(item => `
     <article class="listing-card">
-      <div class="item-art ${artClass(item.category)}">
+      <div class="item-art ${artClass(item.category)}" style="background-image:url('${item.image || 'assets/calculator.jpg'}')">
+        <span class="image-tint"></span>
         <span class="art-symbol">${escapeHtml(item.art)}</span>
         ${item.featured ? '<span class="badge">Popular</span>' : ''}
         <span class="art-label">${escapeHtml(item.category)}</span>
@@ -61,7 +62,7 @@ function renderListings() {
         <h3 class="card-title">${escapeHtml(item.name)}</h3>
         <div class="card-meta"><span>${escapeHtml(item.location)}</span><span>★ ${item.rating}</span></div>
         <div class="card-footer">
-          <div class="price">₹${item.price}<span>/day</span></div>
+          <div><div class="price">₹${item.price}<span>/day</span></div><div class="pricing-note">6% of ₹${item.originalPrice.toLocaleString('en-IN')}</div></div>
           <button class="card-action" data-view="${item.id}">View item</button>
         </div>
       </div>
@@ -126,12 +127,12 @@ function openDetail(id) {
   if (!item) return;
   document.getElementById('detailContent').innerHTML = `
     <div class="detail-top">
-      <div class="detail-art ${artClass(item.category)}"><span>${escapeHtml(item.art)}</span></div>
+      <div class="detail-art ${artClass(item.category)}" style="background-image:url('${item.image || 'assets/calculator.jpg'}')"><span class="image-tint"></span><span>${escapeHtml(item.art)}</span></div>
       <div class="detail-info">
         <div class="card-category">${escapeHtml(item.category)} · ${escapeHtml(item.availability)}</div>
         <h2 id="detailTitle" class="card-title">${escapeHtml(item.name)}</h2>
         <div class="card-meta"><span>★ ${item.rating} (${item.reviews} reviews)</span><span>${escapeHtml(item.location)}</span></div>
-        <div class="detail-price">₹${item.price} <span>/ day + ₹${item.deposit} refundable deposit</span></div>
+        <div class="detail-price">₹${item.price} <span>/ day · 6% of ₹${item.originalPrice.toLocaleString('en-IN')} · ₹${item.deposit} refundable deposit</span></div>
         <ul class="detail-list"><li>College ID verified owner: ${escapeHtml(item.owner)}</li><li>Clear return and damage policy</li><li>Pickup on campus</li></ul>
         <p class="modal-subtitle">${escapeHtml(item.description)}</p>
         <div class="date-row"><label>Start date<input id="startDate" type="date"></label><label>Return date<input id="endDate" type="date"></label></div>
@@ -170,7 +171,8 @@ document.getElementById('listForm').addEventListener('submit', e => {
     id: Date.now(),
     name: data.get('name'),
     category: data.get('category'),
-    price: Number(data.get('price')),
+    price: Math.max(1, Math.round(Number(data.get('purchasePrice')) * 0.06)),
+    originalPrice: Number(data.get('purchasePrice')),
     deposit: Number(data.get('deposit')),
     location: `${data.get('location')} · 0.2 km`,
     distance: 0.2,
@@ -178,6 +180,7 @@ document.getElementById('listForm').addEventListener('submit', e => {
     reviews: 0,
     owner: 'You',
     art: 'NEW',
+    image: 'assets/projector.jpg',
     description: data.get('description'),
     availability: 'Available today'
   };

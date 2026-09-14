@@ -1,15 +1,22 @@
-CampusShare — frontend prototype
+CampusShare — Student-to-Student Rental Marketplace Prototype
 
-Files
-- index.html: full website structure
-- styles.css: responsive styling and UI
-- script.js: search, filters, sorting, item details, rental estimation, demo login, and listing creation
+Updated pricing model:
+- Rental price per day = 6% of the item's original buying price.
+- Example: an item bought for ₹500 is listed at ₹30/day.
+- The listing form calculates the 6% rental price automatically from the original purchase price.
 
-How to run
-1. Keep the three files in the same folder.
-2. Open index.html in a modern browser.
+Included:
+- 12 dummy student listings
+- Local product images for every dummy listing
+- Search, categories, sorting and detail views
+- Rental period calculator
+- Security deposit display
+- Demo login
+- Demo listing creation flow
 
-Notes
-- Listings are dummy data.
-- Login, reservations, and item publishing are demo-only and run in the browser.
-- No real payment, authentication, database, or server is connected.
+How to run:
+1. Keep the folder structure intact.
+2. Open index.html directly in a browser, or deploy the folder with GitHub Pages.
+3. For GitHub Pages, upload index.html, styles.css, script.js, README.txt, and the assets folder.
+
+Educational prototype only — no real accounts, payments, bookings, or backend are connected.

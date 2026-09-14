@@ -83,13 +83,17 @@ h1 span { color: var(--green); }
 .listing-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:18px; }
 .listing-card { background:#fff; border:1px solid var(--line); border-radius:18px; overflow:hidden; transition:transform .18s, box-shadow .18s; }
 .listing-card:hover { transform:translateY(-4px); box-shadow:var(--shadow); }
-.item-art { height:174px; position:relative; display:flex; align-items:flex-end; padding:18px; }
+.item-art { height:174px; position:relative; display:flex; align-items:flex-end; padding:18px; background-size:cover; background-position:center; overflow:hidden; }
 .item-art.study { background:linear-gradient(135deg,#e9edf0,#d9e0e1); }
 .item-art.electronics { background:linear-gradient(135deg,#e2ece7,#c5ddd0); }
 .item-art.fashion { background:linear-gradient(135deg,#f7eadb,#efd8bf); }
 .item-art.mobility { background:linear-gradient(135deg,#e8ece3,#cfdcc7); }
 .item-art.sports { background:linear-gradient(135deg,#ede7f3,#d8cbe5); }
 .item-art.hostel { background:linear-gradient(135deg,#f1ece1,#e4dcc9); }
+.image-tint { position:absolute; inset:0; background:linear-gradient(180deg, rgba(255,255,255,.04), rgba(18,32,27,.22)); }
+.detail-art { background-size:cover; background-position:center; position:relative; overflow:hidden; }
+.detail-art > span:last-child { position:relative; z-index:1; color:rgba(255,255,255,.85); text-shadow:0 2px 8px rgba(0,0,0,.35); }
+.pricing-note { margin-top:3px; font-size:10px; color:#89938e; }
 .art-label { background:rgba(255,255,255,.84); backdrop-filter:blur(8px); border-radius:10px; padding:7px 9px; font-family:"Space Grotesk"; font-weight:700; font-size:12px; }
 .art-symbol { position:absolute; inset:0; display:grid; place-items:center; font-family:"Space Grotesk"; font-weight:800; font-size:45px; color:rgba(18,32,27,.65); letter-spacing:-.08em; }
 .badge { position:absolute; right:12px; top:12px; background:#fff; padding:6px 8px; border-radius:999px; font-size:10px; font-weight:800; box-shadow:0 5px 15px rgba(0,0,0,.08); }

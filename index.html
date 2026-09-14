@@ -61,7 +61,7 @@
               <div class="mock-info">
                 <strong>Casio fx-991CW</strong>
                 <span>0.6 km · 4.9 ★</span>
-                <b>₹30/day <em>+ ₹300 deposit</em></b>
+                <b>₹90/day <em>+ ₹300 deposit</em></b>
               </div>
             </div>
             <div class="mock-card">
@@ -69,7 +69,7 @@
               <div class="mock-info">
                 <strong>Engineering Maths Vol. 1</strong>
                 <span>1.1 km · 4.8 ★</span>
-                <b>₹15/day <em>+ ₹150 deposit</em></b>
+                <b>₹36/day <em>+ ₹150 deposit</em></b>
               </div>
             </div>
             <div class="mock-footer"><span>Verified campus members</span><span>●</span></div>
@@ -196,9 +196,10 @@
         <label>Item name<input required name="name" placeholder="e.g. Casio fx-991ES Plus"></label>
         <div class="form-row">
           <label>Category<select required name="category"><option>Study</option><option>Electronics</option><option>Fashion</option><option>Mobility</option><option>Sports</option><option>Hostel</option></select></label>
-          <label>Price / day (₹)<input required type="number" min="1" name="price" placeholder="30"></label>
+          <label>Original buying price (₹)<input required type="number" min="1" name="purchasePrice" placeholder="500" id="purchasePrice"></label>
         </div>
         <div class="form-row">
+          <label>Rental price / day (₹)<input type="number" id="calculatedPrice" readonly placeholder="30"></label>
           <label>Deposit (₹)<input required type="number" min="0" name="deposit" placeholder="300"></label>
           <label>Pickup area<input required name="location" placeholder="Main Gate, Block B"></label>
         </div>
@@ -225,6 +226,9 @@
   </div>
 
   <div class="toast" id="toast" role="status" aria-live="polite"></div>
-  <script src="script.js"></script>
+  <script>
+document.addEventListener('DOMContentLoaded',()=>{const p=document.getElementById('purchasePrice'),c=document.getElementById('calculatedPrice');if(p&&c)p.addEventListener('input',()=>{c.value=p.value?Math.max(1,Math.round(Number(p.value)*0.06)):''});});
+</script>
+<script src="script.js"></script>
 </body>
 </html>
