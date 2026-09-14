@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="CampusShare — student-to-student rentals for affordable temporary access to useful campus items." />
+  <title>CampusShare — Share access, not ownership</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="#top" aria-label="CampusShare home">
+        <span class="brand-mark">CS</span>
+        <span>CampusShare</span>
+      </a>
+      <nav class="desktop-nav" aria-label="Primary navigation">
+        <a href="#browse">Browse</a>
+        <a href="#how-it-works">How it works</a>
+        <a href="#safety">Safety</a>
+      </nav>
+      <div class="nav-actions">
+        <button class="text-button" id="openLogin">Log in</button>
+        <button class="primary-button small" id="openList">List an item</button>
+      </div>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <div class="eyebrow"><span class="pulse"></span> Built for campus communities</div>
+          <h1>Why buy it for a week when you can <span>share it for a day?</span></h1>
+          <p class="hero-lede">Rent useful things from students around you — calculators, textbooks, formal wear, bikes, electronics and more.</p>
+          <div class="hero-search">
+            <span class="search-icon">⌕</span>
+            <input id="heroSearch" type="search" placeholder="What do you need today? e.g. calculator" aria-label="Search CampusShare">
+            <button class="primary-button" id="heroSearchBtn">Search</button>
+          </div>
+          <div class="trust-row">
+            <span>✓ College ID verified</span>
+            <span>✓ Security deposits</span>
+            <span>✓ Ratings & reviews</span>
+          </div>
+        </div>
+        <div class="hero-visual" aria-label="CampusShare marketplace preview">
+          <div class="floating-tag tag-one">₹35/day</div>
+          <div class="floating-tag tag-two">4.9 ★ owner</div>
+          <div class="device-card">
+            <div class="device-topbar">
+              <span>CampusShare</span>
+              <span class="dot-menu">•••</span>
+            </div>
+            <div class="mock-search">⌕ <span>scientific calculator</span></div>
+            <div class="mock-card">
+              <div class="mock-thumb calculator">FX</div>
+              <div class="mock-info">
+                <strong>Casio fx-991CW</strong>
+                <span>0.6 km · 4.9 ★</span>
+                <b>₹30/day <em>+ ₹300 deposit</em></b>
+              </div>
+            </div>
+            <div class="mock-card">
+              <div class="mock-thumb book">ECO</div>
+              <div class="mock-info">
+                <strong>Engineering Maths Vol. 1</strong>
+                <span>1.1 km · 4.8 ★</span>
+                <b>₹15/day <em>+ ₹150 deposit</em></b>
+              </div>
+            </div>
+            <div class="mock-footer"><span>Verified campus members</span><span>●</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="stats-strip">
+      <div class="container stats-grid">
+        <div><strong>1,240+</strong><span>items shared</span></div>
+        <div><strong>₹18.4L</strong><span>student savings</span></div>
+        <div><strong>4.8/5</strong><span>average rating</span></div>
+        <div><strong>12</strong><span>campuses onboarded</span></div>
+      </div>
+    </section>
+
+    <section class="section" id="browse">
+      <div class="container">
+        <div class="section-heading">
+          <div>
+            <div class="eyebrow">Explore the campus</div>
+            <h2>Things students are sharing</h2>
+            <p>Find what you need, choose your dates, and keep your money for what matters.</p>
+          </div>
+          <button class="outline-button" id="clearFilters">Reset filters</button>
+        </div>
+
+        <div class="toolbar">
+          <div class="search-box">
+            <span>⌕</span>
+            <input id="listingSearch" type="search" placeholder="Search items, brands, or keywords..." />
+          </div>
+          <div class="filter-scroll" id="categoryFilters" role="tablist" aria-label="Categories">
+            <button class="filter-chip active" data-category="All">All</button>
+            <button class="filter-chip" data-category="Study">Study</button>
+            <button class="filter-chip" data-category="Electronics">Electronics</button>
+            <button class="filter-chip" data-category="Fashion">Fashion</button>
+            <button class="filter-chip" data-category="Mobility">Mobility</button>
+            <button class="filter-chip" data-category="Sports">Sports</button>
+            <button class="filter-chip" data-category="Hostel">Hostel</button>
+          </div>
+          <label class="sort-control">Sort
+            <select id="sortSelect">
+              <option value="recommended">Recommended</option>
+              <option value="price-low">Price: low to high</option>
+              <option value="rating">Top rated</option>
+              <option value="distance">Closest first</option>
+            </select>
+          </label>
+        </div>
+
+        <div class="listing-grid" id="listingGrid"></div>
+        <div class="empty-state hidden" id="emptyState">
+          <div class="empty-icon">⌕</div>
+          <h3>No matches yet</h3>
+          <p>Try another search term or category.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="how-section" id="how-it-works">
+      <div class="container">
+        <div class="section-heading centered">
+          <div>
+            <div class="eyebrow">Simple by design</div>
+            <h2>From “I need this” to “Done.”</h2>
+          </div>
+        </div>
+        <div class="steps-grid">
+          <article class="step-card"><span class="step-num">01</span><div class="step-icon">⌕</div><h3>Discover</h3><p>Search by item, category, or what you need for your next class, event, or trip.</p></article>
+          <article class="step-card"><span class="step-num">02</span><div class="step-icon">◫</div><h3>Reserve</h3><p>Pick your dates, review the owner profile, and pay the rental fee plus a refundable deposit.</p></article>
+          <article class="step-card"><span class="step-num">03</span><div class="step-icon">↔</div><h3>Use & return</h3><p>Meet on campus or choose delivery, use the item, then return it on time.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="safety-section" id="safety">
+      <div class="container safety-grid">
+        <div>
+          <div class="eyebrow">Trust is part of the product</div>
+          <h2>Made for student-to-student sharing.</h2>
+          <p>CampusShare is designed around the biggest concern students raised during testing: “Can I trust the person on the other side?”</p>
+        </div>
+        <div class="safety-cards">
+          <div class="safety-card"><span>✓</span><div><strong>College ID verification</strong><p>Only verified campus members can rent or list.</p></div></div>
+          <div class="safety-card"><span>₹</span><div><strong>Refundable security deposit</strong><p>Protects owners against avoidable damage or loss.</p></div></div>
+          <div class="safety-card"><span>★</span><div><strong>Ratings & reviews</strong><p>See how previous exchanges went before you book.</p></div></div>
+          <div class="safety-card"><span>↩</span><div><strong>Clear return policy</strong><p>Set due dates and damage rules before every rental.</p></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta-section">
+      <div class="container cta-card">
+        <div><div class="eyebrow">Have something sitting unused?</div><h2>Turn spare stuff into student value.</h2><p>List an item in under two minutes. You set the price, availability, and handover method.</p></div>
+        <button class="primary-button" id="openListCta">List your first item →</button>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-wrap">
+      <div><div class="brand footer-brand"><span class="brand-mark">CS</span><span>CampusShare</span></div><p>Share access, not ownership.</p></div>
+      <div class="footer-links"><a href="#browse">Browse</a><a href="#how-it-works">How it works</a><a href="#safety">Trust & safety</a></div>
+      <div class="footer-copy">© 2026 CampusShare · Prototype for educational use</div>
+    </div>
+  </footer>
+
+  <div class="modal-backdrop hidden" id="detailModal" role="dialog" aria-modal="true" aria-labelledby="detailTitle">
+    <div class="modal detail-modal">
+      <button class="close-button" data-close="detailModal" aria-label="Close">×</button>
+      <div id="detailContent"></div>
+    </div>
+  </div>
+
+  <div class="modal-backdrop hidden" id="listModal" role="dialog" aria-modal="true" aria-labelledby="listTitle">
+    <div class="modal list-modal">
+      <button class="close-button" data-close="listModal" aria-label="Close">×</button>
+      <div class="eyebrow">Create a listing</div>
+      <h2 id="listTitle">List an item on CampusShare</h2>
+      <p class="modal-subtitle">This demo form adds your listing locally to the prototype. No real payment or account is created.</p>
+      <form id="listForm" class="list-form">
+        <label>Item name<input required name="name" placeholder="e.g. Casio fx-991ES Plus"></label>
+        <div class="form-row">
+          <label>Category<select required name="category"><option>Study</option><option>Electronics</option><option>Fashion</option><option>Mobility</option><option>Sports</option><option>Hostel</option></select></label>
+          <label>Price / day (₹)<input required type="number" min="1" name="price" placeholder="30"></label>
+        </div>
+        <div class="form-row">
+          <label>Deposit (₹)<input required type="number" min="0" name="deposit" placeholder="300"></label>
+          <label>Pickup area<input required name="location" placeholder="Main Gate, Block B"></label>
+        </div>
+        <label>Short description<textarea required name="description" rows="3" placeholder="Condition, what's included, and any useful details..."></textarea></label>
+        <button class="primary-button full" type="submit">Publish demo listing</button>
+      </form>
+    </div>
+  </div>
+
+  <div class="modal-backdrop hidden" id="loginModal" role="dialog" aria-modal="true" aria-labelledby="loginTitle">
+    <div class="modal login-modal">
+      <button class="close-button" data-close="loginModal" aria-label="Close">×</button>
+      <div class="login-art">CS</div>
+      <div class="eyebrow">Campus access</div>
+      <h2 id="loginTitle">Welcome back</h2>
+      <p class="modal-subtitle">Demo sign-in — any college email works.</p>
+      <form id="loginForm" class="list-form">
+        <label>College email<input required type="email" placeholder="you@college.edu"></label>
+        <label>Password<input required type="password" minlength="4" placeholder="••••••••"></label>
+        <button class="primary-button full" type="submit">Continue</button>
+      </form>
+      <div class="verified-note">✓ Demo only · no credentials are stored</div>
+    </div>
+  </div>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="script.js"></script>
+</body>
+</html>
