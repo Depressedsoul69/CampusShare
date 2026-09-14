@@ -199,7 +199,7 @@
           <label>Original buying price (₹)<input required type="number" min="1" name="purchasePrice" placeholder="500" id="purchasePrice"></label>
         </div>
         <div class="form-row">
-          <label>Rental price / day (₹)<input type="number" id="calculatedPrice" readonly placeholder="30"></label>
+          <label>Rental price / day (₹)<input required type="number" min="1" name="rentalPrice" placeholder="30"></label>
           <label>Deposit (₹)<input required type="number" min="0" name="deposit" placeholder="300"></label>
           <label>Pickup area<input required name="location" placeholder="Main Gate, Block B"></label>
         </div>
@@ -227,7 +227,7 @@
 
   <div class="toast" id="toast" role="status" aria-live="polite"></div>
   <script>
-document.addEventListener('DOMContentLoaded',()=>{const p=document.getElementById('purchasePrice'),c=document.getElementById('calculatedPrice');if(p&&c)p.addEventListener('input',()=>{c.value=p.value?Math.max(1,Math.round(Number(p.value)*0.06)):''});});
+
 </script>
 <script src="script.js"></script>
 </body>

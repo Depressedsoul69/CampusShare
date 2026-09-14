@@ -104,6 +104,10 @@ h1 span { color: var(--green); }
 .card-footer { display:flex; justify-content:space-between; align-items:end; padding-top:13px; margin-top:12px; border-top:1px solid #edf0ee; }
 .price { font-family:"Space Grotesk"; font-size:18px; font-weight:700; }
 .price span { font-family:"DM Sans"; color:#87908c; font-size:10px; font-weight:500; }
+.original-price { margin-top:3px; color:#9aa29e; font-size:11px; text-decoration:line-through; text-decoration-thickness:1.5px; }
+.deposit-note { color:#87908c; font-size:12px; margin-top:-6px; }
+.detail-price del { color:#9aa29e; font-family:"DM Sans"; font-size:15px; font-weight:500; margin-left:7px; text-decoration-thickness:1.5px; }
+
 .card-action { border:0; background:var(--green-2); color:var(--green); padding:8px 10px; border-radius:9px; font-size:11px; font-weight:800; }
 .empty-state { text-align:center; padding:70px 20px; border:1px dashed var(--line); border-radius:18px; background:#fff; }
 .empty-icon { width:52px;height:52px;border-radius:50%;background:var(--green-2);display:grid;place-items:center;margin:0 auto 12px;font-size:25px;color:var(--green); }
